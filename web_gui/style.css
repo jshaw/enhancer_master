@@ -1,0 +1,27 @@
+html, body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main {
+    width: 50% !important;
+}
+
+.dg{
+    font-size: 15px;
+}
+
+dg .slider {
+    width: 80% !important;
+}
+
+.dg li:not(.folder){
+    height: 30px;
+}
+
+.dg .close-button,
+.dg .save-row {
+    width: 50% !important;
+}
