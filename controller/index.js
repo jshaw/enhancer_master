@@ -40,16 +40,29 @@ var ports = [];
 var modeToKeyMap = {
     'start': 'g',
     'stop': 's',
-    'sweep': '1',
-    'noise': '4',
-    'noise_react': '5',
+    'all_same_sweep': '1',
+    'all_same_noise': '2',
+    'hsb_saturation_sweep': '3',
+    'hsb_saturation_noise': '4',
+    'animate_hsb_sweep': '5',
+    'animate_hsb_noise': '6',
+    'hue_noise_sweep': '7',
+    'hue_noise_noise': '8',
+    'random_hue_noise_saturation': '9',
     'reset': '-',
     'reset_with_pause': '='
 };
 
 var randomize_function_list = [
-    'sweep', 
-    'noise'
+    'all_same_sweep',
+    'all_same_noise',
+    'hsb_saturation_sweep',
+    'hsb_saturation_noise',
+    'animate_hsb_sweep',
+    'animate_hsb_noise',
+    'hue_noise_sweep',
+    'hue_noise_noise',
+    'random_hue_noise_saturation',
 ];
 
 
