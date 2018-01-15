@@ -18,6 +18,9 @@ var current_mode = 'noise_react';
 var previous_mode = 'stop';
 var last_active_mode = "noise_react";
 
+// to help with sending stop once on random mode
+var first_stopped = false;
+
 
 // taken from the gui code. The functionality needs to be added here,
 // to allow for not always having to maintaine and have active browsers.
@@ -33,6 +36,7 @@ var lastAutoRestDelay = lastAutoRestDelayShort;
 
 // these two vars need to be the same
 var lastAutoRestDelayLong = 300000;
+
 // var lastAutoRestDelayLong = 10000;
 
 var ports = [];
@@ -40,6 +44,7 @@ var ports = [];
 var modeToKeyMap = {
     'start': 'g',
     'stop': 's',
+    'stop_rainbow': '0',
     'all_same_sweep': '1',
     'all_same_noise': '2',
     'hsb_saturation_sweep': '3',
@@ -54,6 +59,7 @@ var modeToKeyMap = {
 };
 
 var randomize_function_list = [
+    'stop_rainbow',
     'all_same_sweep',
     'all_same_noise',
     'hsb_saturation_sweep',
@@ -62,8 +68,13 @@ var randomize_function_list = [
     'animate_hsb_noise',
     'hue_noise_sweep',
     'hue_noise_noise',
-    'random_hue_noise_saturation',
+    'random_hue_noise_saturation'
 ];
+
+// var randomize_function_list = [
+//     'all_same_sweep',
+//     'all_same_noise'
+// ];
 
 
 var last_message_p0 = 0;
@@ -244,7 +255,9 @@ var global_timer = setInterval(function() {
                 // controls.stop();
 
 
-                resetSerialPorts();
+                // resetSerialPorts();
+                globalControl('stop');
+                publishMode('stop');
             }
 
         } else {
@@ -416,7 +429,7 @@ function initPubNub(){
                     globalControl(msg_str);
                 }else {
                     // console.log("get here?");
-                    panelControl(msg_str);
+                    // panelControl(msg_str);
                 }
             } else {
                 // console.log("UNDEFINED!!!!!!");
@@ -507,7 +520,13 @@ function initPubNubInstallation(){
 
 function publishInstallationData(data){
 
-    if ( (control_val != "stop") && (data.trim().length > 5)){
+    if ( (control_val != "stop") && (data.trim().length > 3)){
+
+        first_stopped == true;
+
+        // console.log("--->>>>>>> data: " + data);
+        // console.log("--->>>>>>> data: " + data.trim());
+        // console.log(data);
 
         var panel_id_data = data.charAt(0);
 
@@ -533,11 +552,15 @@ function publishInstallationData(data){
         },
         function (status, response) {
             // handle status, response
-            console.log("response log: ", arguments);
+            // console.log("response log: ", arguments);
         });
 
     } else {
-        console.log("don't send data, it is stopped");
+        // console.log("don't send data, it is stopped");
+        if(first_stopped == true){
+            // console.log("SENT STOP COMMAND");
+            globalControl("stop");
+        }
 
     }
 
@@ -555,6 +578,10 @@ function globalControl(msg){
     // this will use the loopup table to reference correct key control to pass via serial
     control_val = msg;
 
+    if(msg == "stop"){
+        first_stopped = false;
+    }
+
     if(ports.length > 0){
 
         _.forEach(ports, function(value, key){
@@ -567,8 +594,13 @@ function globalControl(msg){
             // TODO, bind a function to the port write and for the drain functions so it doesn't need 
             // to be duplicated over and over and over... :/
             // =========================================
+            // console.log("Whats the control_val??? : ");
+            // console.log(control_val);
+            // console.log("Whats the LOOKUP??? : ");
+            // console.log(modeToKeyMap[control_val]);
+            
 
-            console.log(control_val);
+            console.log("========================");
 
             // used keymap look up table to reference the control key to the control mode
             ports[key].write(new Buffer(modeToKeyMap[control_val]), function () {

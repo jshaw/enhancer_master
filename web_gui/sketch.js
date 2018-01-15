@@ -13,10 +13,17 @@ var pubnub_logging;
 var num_of_panels = 2;
 
 var function_control_list = [
+    'stop',
     'start',
-    'stop', 
-    'sweep', 
-    'noise', 
+    'all_same_sweep',
+    'all_same_noise',
+    'hsb_saturation_sweep',
+    'hsb_saturation_noise',
+    'animate_hsb_sweep',
+    'animate_hsb_noise',
+    'hue_noise_sweep',
+    'hue_noise_noise',
+    'random_hue_noise_saturation',
     'reset',
     'reset_with_pause'];
 
@@ -95,9 +102,9 @@ function setup() {
             if(i == 0){
                 f0.add(controls, value);
             } else if(i == 1){
-                f1.add(controls, value + suffix);
+                // f1.add(controls, value + suffix);
             } else if(i == 2){
-                f2.add(controls, value + suffix);
+                // f2.add(controls, value + suffix);
             }
         });
     };
@@ -197,7 +204,7 @@ function pubnubDataLogging(){
     })      
     
     pubnub_logging.subscribe({
-        channels: ['enhancer_app'] 
+        channels: ['enhancer_control'] 
 
     });
 }
@@ -223,7 +230,7 @@ function pubnubModeLogging(){
     })      
     
     pubnub.subscribe({
-        channels: ['enhancer_control'] 
+        channels: ['enhancer_app'] 
     });
 }
 
@@ -268,7 +275,7 @@ function outputMode(mode){
 
 function Control() {
     this.publishConfig = {
-        channel : "enhancer_control",
+        channel : "enhancer_app",
     };
 
     console.log("this.publishConfig: " + this.publishConfig);
@@ -287,6 +294,28 @@ function Control() {
 
         this.publish();
     });
+
+    this.reset = function(){
+        console.log("reset");
+        
+
+        this.publishConfig.message = {
+            message : "reset"
+        };
+
+        this.publish();
+    }
+
+    this.reset_with_pause = function(){
+        console.log("reset_with_pause");
+        
+
+        this.publishConfig.message = {
+            message : "reset_with_pause"
+        };
+
+        this.publish();
+    }
 
     this.start = function(){
         console.log("start");
@@ -309,182 +338,232 @@ function Control() {
         this.publish();
     }
 
-    this.sweep = function(){
-        console.log("sweep");
+    this.all_same_sweep = function(){
+        console.log("all_same_sweep");
         
 
         this.publishConfig.message = {
-            message : "sweep"
+            message : "all_same_sweep"
         };
 
         this.publish();
     }
 
-    this.noise = function(){
-        console.log("noise");
+    this.all_same_noise = function(){
+        console.log("all_same_noise");
         
 
         this.publishConfig.message = {
-            message : "noise"
+            message : "all_same_noise"
         };
 
         this.publish();
     }
 
-    this.reset = function(){
-        console.log("reset");
+    this.hsb_saturation_sweep = function(){
+        console.log("hsb_saturation_sweep");
 
         this.publishConfig.message = {
-            message : "reset"
+            message : "hsb_saturation_sweep"
         };
 
         this.publish();
     }
 
-    this.reset_with_pause = function(){
-        console.log("reset_with_pause");
+    this.hsb_saturation_noise = function(){
+        console.log("hsb_saturation_noise");
 
         this.publishConfig.message = {
-            message : "reset_with_pause"
+            message : "hsb_saturation_noise"
         };
 
         this.publish();
     }
 
-    // ========================
-    // ========================
-
-    // need to refactor after here
-    // Panel 1
-    this.start__f0 = function(){
-        console.log("start__f0");
+    this.animate_hsb_sweep = function(){
+        console.log("animate_hsb_sweep");
 
         this.publishConfig.message = {
-            message : "start__f0"
+            message : "animate_hsb_sweep"
         };
 
         this.publish();
     }
 
-    this.stop__f0 = function(){
-        console.log("stop__f0");
+    this.animate_hsb_noise = function(){
+        console.log("animate_hsb_noise");
 
         this.publishConfig.message = {
-            message : "stop__f0"
+            message : "animate_hsb_noise"
         };
 
         this.publish();
     }
 
-    this.sweep__f0 = function(){
-        console.log("sweep__f0");
+    this.hue_noise_sweep = function(){
+        console.log("hue_noise_sweep");
 
         this.publishConfig.message = {
-            message : "sweep__f0"
+            message : "hue_noise_sweep"
         };
 
         this.publish();
     }
 
-    this.noise__f0 = function(){
-        console.log("noise__f0");
+    this.hue_noise_noise = function(){
+        console.log("hue_noise_noise");
+
+        this.publishConfig.message = {
+            message : "hue_noise_noise"
+        };
+
+        this.publish();
+    }
+
+    this.random_hue_noise_saturation = function(){
+        console.log("random_hue_noise_saturation");
+
+        this.publishConfig.message = {
+            message : "random_hue_noise_saturation"
+        };
+
+        this.publish();
+    }
+
+    // // ========================
+    // // ========================
+
+    // // need to refactor after here
+    // // Panel 1
+    // this.start__f0 = function(){
+    //     console.log("start__f0");
+
+    //     this.publishConfig.message = {
+    //         message : "start__f0"
+    //     };
+
+    //     this.publish();
+    // }
+
+    // this.stop__f0 = function(){
+    //     console.log("stop__f0");
+
+    //     this.publishConfig.message = {
+    //         message : "stop__f0"
+    //     };
+
+    //     this.publish();
+    // }
+
+    // this.sweep__f0 = function(){
+    //     console.log("sweep__f0");
+
+    //     this.publishConfig.message = {
+    //         message : "sweep__f0"
+    //     };
+
+    //     this.publish();
+    // }
+
+    // this.noise__f0 = function(){
+    //     console.log("noise__f0");
         
 
-        this.publishConfig.message = {
-            message : "noise__f0"
-        };
+    //     this.publishConfig.message = {
+    //         message : "noise__f0"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
-    this.reset__f0 = function(){
-        console.log("reset");
+    // this.reset__f0 = function(){
+    //     console.log("reset");
         
 
-        this.publishConfig.message = {
-            message : "reset__f0"
-        };
+    //     this.publishConfig.message = {
+    //         message : "reset__f0"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
-    this.reset_with_pause__f0 = function(){
-        console.log("reset_with_pause");
+    // this.reset_with_pause__f0 = function(){
+    //     console.log("reset_with_pause");
         
 
-        this.publishConfig.message = {
-            message : "reset_with_pause__f0"
-        };
+    //     this.publishConfig.message = {
+    //         message : "reset_with_pause__f0"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
 
-    // panel 2
-    // ============================
-    this.start__f1 = function(){
-        console.log("start__f1");
+    // // panel 2
+    // // ============================
+    // this.start__f1 = function(){
+    //     console.log("start__f1");
 
-        this.publishConfig.message = {
-            message : "start__f1"
-        };
+    //     this.publishConfig.message = {
+    //         message : "start__f1"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
-    this.stop__f1 = function(){
-        console.log("stop__f1");
+    // this.stop__f1 = function(){
+    //     console.log("stop__f1");
 
-        this.publishConfig.message = {
-            message : "stop__f1"
-        };
+    //     this.publishConfig.message = {
+    //         message : "stop__f1"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
-    this.sweep__f1 = function(){
-        console.log("sweep__f1");
+    // this.sweep__f1 = function(){
+    //     console.log("sweep__f1");
         
 
-        this.publishConfig.message = {
-            message : "sweep__f1"
-        };
+    //     this.publishConfig.message = {
+    //         message : "sweep__f1"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
-    this.noise__f1 = function(){
-        console.log("noise__f1");
+    // this.noise__f1 = function(){
+    //     console.log("noise__f1");
         
 
-        this.publishConfig.message = {
-            message : "noise__f1"
-        };
+    //     this.publishConfig.message = {
+    //         message : "noise__f1"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
-    this.reset__f1 = function(){
-        console.log("reset");
+    // this.reset__f1 = function(){
+    //     console.log("reset");
         
 
-        this.publishConfig.message = {
-            message : "reset__f1"
-        };
+    //     this.publishConfig.message = {
+    //         message : "reset__f1"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
-    this.reset_with_pause__f1 = function(){
-        console.log("reset_with_pause");
+    // this.reset_with_pause__f1 = function(){
+    //     console.log("reset_with_pause");
         
 
-        this.publishConfig.message = {
-            message : "reset_with_pause__f1"
-        };
+    //     this.publishConfig.message = {
+    //         message : "reset_with_pause__f1"
+    //     };
 
-        this.publish();
-    }
+    //     this.publish();
+    // }
 
     this.publish = function(){
 
