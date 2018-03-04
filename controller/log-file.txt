@@ -1,0 +1,287 @@
+/dev/cu.Bluetooth-Incoming-Port
+undefined
+undefined
+=====
+/dev/cu.HC-05-DevB
+undefined
+undefined
+=====
+/dev/cu.usbmodem1411
+undefined
+Arduino Srl            
+=====
+{ web_control: 
+   { pubKey: 'pub-c-3b210901-277b-4ee8-9973-8372c99ba426',
+     subKey: 'sub-c-ec3b6b7a-f5a9-11e7-9869-a6bd95f83dd1',
+     secretKey: 'sec-c-MDMxOTViMjAtN2M3MS00MTJlLTg1ZjAtOGI3NmEzNGI5ZmM1' },
+  installation: 
+   { pubKey: 'pub-c-6ba3b429-f10a-4097-a49d-59c4628e2769',
+     subKey: 'sub-c-fc02945c-f5a9-11e7-9723-66707ad51ffc',
+     secretKey: 'sec-c-MDc3ODNkMGUtNmI5ZS00NWE1LTkwM2ItNjYxYTQ5NDc5ZWI4' } }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781116853982' } }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781116859604',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: 'Logging my arduino:' }
+method_name: animate_hsb_noise
+startUpSequence: false
+msg_str: undefined
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781125885485' } }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781125935255',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: 'noise' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781153515698' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781153559248',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_5:90:14/5:106:22/5:112:12/5:90:15/5:114:13' }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781161181499',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_4:90:201/4:72:221/4:66:195/4:90:200/4:66:200/4:89:199' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781161333692' } }
+msg_str: undefined
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781168841523' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781168870979',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_3:90:17/3:97:5/3:69:10/3:88:10/3:74:14/3:67:21/3:100:13' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781176527325' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781176582770',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_2:90:414/2:110:400/2:80:384/2:86:399/2:85:375/2:59:382/2:92:402/2:81:386' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781184068623' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781184127465',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_1:90:0/1:63:0/1:65:0/1:91:0/1:70:0/1:94:0/1:109:0/1:90:0/1:117:0' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781191623000' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781191700595',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_0:90:5/0:72:6/0:62:24/0:87:9/0:70:16/0:79:11/0:108:8/0:87:12/0:112:10/0:104:10' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781204325692' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781204323839',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_9:90:79:104:2/9:73:4/9:95:3/9:69:3/9:72:8/9:95:8/9:76:8/9:109:8/9:106:8/9:93:7' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781204824453' } }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781205364941' } }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781205862680' } }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781206289117' } }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781204852390',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_10:90:2010:61:10/10:90:13/10:79:10/10:87:12/10:116:10/10:90:9/10:109:9/10:95:5/10:70:12/10:91:4' }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781205341452',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_11:90:34011:67:340/11:78:329/11:83:328/11:66:320/11:102:325/11:92:222/11:98:305/11:118:317/11:82:277/11:99:234' }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781205922053',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_12:90:29312:115:298/12:97:296/12:100:300/12:110:295/12:69:298/12:89:290/12:72:292/12:69:294/12:100:300/12:81:291' }
+msg_str: undefined
+msg_str: undefined
+msg_str: undefined
+msg_str: undefined
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781207316220' } }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781207279410',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_15:90:1015:107:10/15:97:9/15:100:10/15:117:11/15:78:7/15:93:6/15:78:9/15:64:9/15:94:4/15:74:4' }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781216824988',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_13:90:26513:65:263/13:82:265/13:79:257/13:68:262/13:105:265/13:89:267/13:102:264/13:114:269/13:80:265/13:101:263' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781217243933' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781217152494',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_14:90:2114:109:15/14:81:11/14:102:10/14:69:11/14:72:12/14:88:12/14:70:10/14:105:17/14:100:11/14:97:17' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781219371809' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781222123508',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_8:90:6/8:67:78:99:10/8:84:7/8:97:7/8:117:15/8:86:7/8:107:11/8:80:16/8:69:13/8:89:18/8:64:14' }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781226985873',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_6:90:15/6:120:11/6:87:22/6:91:156:92:25/6:60:11/6:89:11/6:75:19/6:85:16/6:113:24/6:90:11/6:114:13/6:97:4/6:77:14' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781227098637' } }
+msg_str: undefined
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781229839622',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_7:90:74/7:92:65/7:110:707:89:66/7:114:66/7:97:66/7:80:66/7:95:67/7:60:72/7:81:67/7:88:66/7:81:66/7:115:68' }
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781232489888' } }
+msg_str: undefined
+response log:  { '0': 
+   { error: false,
+     operation: 'PNPublishOperation',
+     statusCode: 200 },
+  '1': { timetoken: '15160781234549832' } }
+New Installation Message { channel: 'enhancer_control',
+  subscription: null,
+  actualChannel: null,
+  subscribedChannel: 'enhancer_control',
+  timetoken: '15160781234558253',
+  publisher: 'pn-70dc856a-eab2-4428-983d-cd8332fa6aa8',
+  userMetadata: {},
+  message: '0_5:85:15/5:76:4/5:89:19/5:60:10/5:90:76/5:90:15/5:90:16/5:120:24/5:90:15/5:102:16' }
+msg_str: undefined

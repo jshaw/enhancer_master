@@ -493,7 +493,7 @@ function initPubNubInstallation(){
             var channelGroup = m.subscription; // The channel group or wildcard subscription match (if exists)
             var pubTT = m.timetoken; // Publish timetoken
             var msg = m.message; // The Payload
-            console.log("New Installation Message", m);
+            //console.log("New Installation Message", m);
           
         },
         presence: function(p) {
@@ -600,7 +600,7 @@ function globalControl(msg){
             // console.log(modeToKeyMap[control_val]);
             
 
-            console.log("========================");
+            // console.log("========================");
 
             // used keymap look up table to reference the control key to the control mode
             ports[key].write(new Buffer(modeToKeyMap[control_val]), function () {
